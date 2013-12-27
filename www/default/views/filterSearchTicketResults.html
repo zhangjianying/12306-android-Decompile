@@ -1,0 +1,62 @@
+<div id="filterSearchTicketResultsView" data-role="page" data-theme="b">
+  <div data-role="header" data-theme="b" data-position="fixed"
+    data-tap-toggle="false">
+    <a id="searchSingleBackBtn" href="searchSingleTicketResults.html" data-icon="back"
+      data-role="button">查询结果</a>
+    <h1>筛选</h1>
+  </div>
+
+  <div data-role="content" style="padding-top: 5px;" data-iscroll>
+    <fieldset>
+      <div data-role="fieldcontain">
+        <label for="seatTypeSelect">席别</label>
+        <select id="seatTypeSelect"  data-role="none"></select>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label for="trainHeaderSelect">车型</label>
+        <select id="trainHeaderSelect" data-role="none">
+          <option value=""></option>
+          <option value="D">动车</option>
+           <option value="Z">Z字头</option>
+           <option value="T">T字头</option>
+           <option value="K">K字头</option>
+           <option value="C">城际高速</option>
+           <option value="others">其他</option>
+        </select>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label for="timePeriodSelect">出发时间</label>
+        <select id="timePeriodSelect"
+          name="出发时间" data-role="none">
+          <option value="0">00:00--24:00</option>
+          <option value="1">00:00--06:00</option>
+          <option value="2">06:00--12:00</option>
+          <option value="3">12:00--18:00</option>
+          <option value="4">18:00--24:00</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <a id="filterSeach" 
+      data-role="button" data-prefetch>查&nbsp;询</a>
+  </div>
+
+
+  <div id="navBar" data-id="navBar" data-role="footer" data-position="fixed"
+    data-tap-toggle="false">
+    <div data-role="navbar" class="f_nav">
+      <ul>
+        <li><a id="bookTicketTab"  data-icon="custom"
+          data-iconpos="top" class="ui-btn-active ui-state-persist">车票预订</a></li>
+        <li><a id="queryOrderTab"  data-icon="custom"
+          data-iconpos="top">订单查询</a></li>
+        <li><a id="my12306Tab"  data-icon="custom"
+          data-iconpos="top">我的12036</a></li>
+        <li><a id="moreOptionsTab"  data-icon="custom"
+          data-iconpos="top">更多功能</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

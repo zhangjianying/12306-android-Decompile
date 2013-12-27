@@ -1,0 +1,231 @@
+<div id="modifyPassengerView" data-role="page" data-dom-cache="true"
+	data-theme="b">
+	<div data-role="header" data-theme="b" data-position="fixed"
+		data-tap-toggle="false">
+		<a id="modifyPassengerBackBtn" data-shadow="false" data-role="button" class="my12306Btn">常用联系人</a>
+		<h1 id="passengerTitle">编辑联系人</h1>
+		<a id="modifyPassengerBtn" data-role="button">完成</a>
+	</div>
+
+	<div data-role="content" class="bottom-space" data-iscroll='{"useTransform":false}'>
+		<fieldset class="hasLegend">
+			<legend>基本信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="modify_PassengerName">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+				<div class="ui-input-text pencil-input">
+				<input id="modify_PassengerName" type="text"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="modify_PassengerSex">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+				<!-- <select id="modify_PassengerSex" class="mobiscroll" name="性别" data-role="none">
+				    <option value=""></option>
+					<option value="M">男</option>
+					<option value="F">女</option> -->
+				<select id="modify_PassengerSex" name="性别" data-iconshadow="false" data-icon="none">
+						<option value="M" selected>男</option>
+						<option value="F">女</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>出生日期</label> 
+				<input id="modify_PassengerBornDateShow" name="出生日期" readonly="readonly" class="right-arrow-input"/>  
+				<input id="modify_PassengerBornDate" name="出生日期" style="display:none"/>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>国家地区</label> 
+				<input id="modify_PassengerCountry" name="国家地区" value="中国CHINA" type="text" readonly="readonly" class="right-arrow-input"/>
+			    <input id="modify_PassengerCountry_code" value="CN" type="hidden"/>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件类型</label> 
+				<!-- <select id="modify_PassengerIdType" class="mobiscroll" name="证件类型" data-role="none">
+					<option value="1">二代身份证</option>
+					<option value="2">一代身份证</option>
+					<option value="C">港澳通行证</option>
+					<option value="G">台湾通行证</option>
+					<option value="B">护照</option> -->
+				<select id="modify_PassengerIdType" name="证件类型" data-iconshadow="false" data-icon="none">
+						<option value="1">二代身份证</option>
+						<option value="2">一代身份证</option>
+						<option value="C">港澳通行证</option>
+						<option value="G">台湾通行证</option>
+						<option value="B">护照</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件号码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_PassengerIdNo" type="text"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>旅客类型</label>
+				
+				<!--  <input id="modify_PassengerUserTypeShow" name="旅客类型" readonly="readonly" class="right-arrow-input"/>  -->
+				
+				<!-- <select id="modify_PassengerUserType" class="mobiscroll" name="证件类型" data-role="none">
+						<option value="1">成人</option>
+						<option value="2">儿童</option>
+						<option value="3">学生</option>
+						<option value="4">残军</option> -->
+				<select id="modify_PassengerUserType" name="旅客类型" data-iconshadow="false" data-icon="none">
+						<option value="1">成人</option>
+						<option value="2">儿童</option>
+						<option value="3">学生</option>
+						<option value="4">残军</option>
+				</select>
+				
+			</div>
+		</fieldset>
+
+		<fieldset class="hasLegend">
+			<legend>联系方式</legend>
+			<div data-role="fieldcontain">
+				<label>手机号码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_PassengerMobileNo" type="tel"></input>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>固定电话</label>
+				<div class="ui-input-text pencil-input">
+				 <input id="modify_PassengerPhoneNo" type="tel"/>
+				 </div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>电子邮件</label>
+				<div class="ui-input-text pencil-input"> 
+				<input id="modify_PassengerEmail" type="email"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</label>
+				<div class="ui-input-text pencil-input">
+				 <input id="modify_PassengerAddress" type="text"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编</label>
+				<div class="ui-input-text pencil-input">
+				 <input id="modify_PassengerPostalCode" type="number" pattern="[0-9]*"/>
+				 </div>
+			</div>
+		</fieldset>
+
+		<div id="passengerOptions" style="display: none;">
+			<fieldset class="hasLegend">
+			<legend>附加信息</legend>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校省份</label>
+					 <input id="modify_pStudentProvince" name="学校省份"
+						type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="modify_pStudentProvince_code"  type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校名称</label>
+					<input id="modify_pStudentSchool" name="学校名称"
+						type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="modify_pStudentSchool_code"  type="hidden"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label>院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_pStudentDepartment" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain">
+					<label>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_pStudentClass" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_pStudentNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;制</label> 
+					<!-- <select id="modify_pStudentSystem" class="mobiscroll" name="学制" data-role="none">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option> -->
+					<select id="modify_pStudentSystem" name="学制" data-iconshadow="false" data-icon="none">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>入学年份</label> 
+					<!-- <input name="入学年份" id="modify_pStudentEnterYear" class="i-txt right-arrow-input" /> -->
+					<select id="modify_pStudentEnterYear" name="入学年份" data-iconshadow="false" data-icon="none">
+        					<option value=""></option>
+       				</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label>优惠卡号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_pPreferenceCardNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>优惠区间</label> 
+					<input id="modify_pPreferenceFromStation" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="modify_pPreferenceFromStation_code"  type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;至</label> 
+					<input id="modify_pPreferenceToStation"	type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="modify_pPreferenceToStation_code" type="hidden"/>
+				</div>
+			</fieldset>
+		</div>
+		<div id="deletePassengerOptions" style="display: none;" class="div_bigBtn">
+			<a id="deletePassengerBtn" class="btn_blue btnText"	data-role="button" data-prefetch>删&nbsp;除 </a>
+		</div>
+		
+		<div>
+			<h5>
+				<span>*</span>温馨提示：
+			</h5>
+			<h5 id="passengerInfoMsg"></h5>
+		</div>
+		<br><br><br>
+	</div>
+	
+	<div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+			<ul>
+				<li><a id="bookTicketTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>车票预订</a></li>
+				<li><a id="queryOrderTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>订单查询</a></li>
+				<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">我的12306</a></li>
+				<li><a id="moreOptionsTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>更多功能</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

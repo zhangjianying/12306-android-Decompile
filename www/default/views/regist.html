@@ -1,0 +1,323 @@
+<div id="registView" data-role="page" data-dom-cache="true">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a id="registBackBtn" data-role="button" data-shadow="false"><span id="registBackValue">更多功能</span></a>
+		<h1>注册</h1>
+	</div>
+
+	<div data-role="content" data-iscroll='{"useTransform":false}'>
+		<div></div>
+		<fieldset class="hasMust hasLegend">
+			<legend>基本信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>用&nbsp;&nbsp;户&nbsp;&nbsp;名</label> 
+				<div class="ui-input-text pencil-input">
+					<input id="regist_user_name" type="text" placeholder="字母、数字或“_”，6-30位"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+				<div class="ui-input-text pencil-input">
+				<input id="regist_passwd" type="password" placeholder="不少于6位"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>密码确认</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_confirmPasswd" type="password" placeholder="请再次输入密码"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label class="toolong">语音查询<br>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+				<div class="ui-input-text pencil-input">
+				<input id="regist_ivrPasswd" type="password"  placeholder="6位数字" maxlength="6"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label class="toolong">语音查询<br>密码确认</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_confirmivrPasswd" type="password" placeholder="再次输入语音查询密码" maxlength="6"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>密码提示</label> 
+<!-- 				<select id="regist_pwd_question" class="mobiscroll" name="密码提示" data-role="none"> -->
+<!-- 					<option value="">请选择密码提示问题</option> -->
+<!-- 					<option value="您的出生地是？">您的出生地是？</option> -->
+<!-- 					<option value="您母亲的姓名是？">您母亲的姓名是？</option> -->
+<!-- 					<option value="您父亲的姓名是？">您父亲的姓名是？</option> -->
+<!-- 					<option value="您配偶的姓名是？">您配偶的姓名是？</option> -->
+<!-- 					<option value="您小学校名是？">您小学校名是？</option> -->
+<!-- 					<option value="您中学校名是？">您中学校名是？</option> -->
+<!-- 					<option value="您大学校名是？">您大学校名是？</option> -->
+<!-- 					<option value="我最喜欢的小说？">我最喜欢的小说？</option> -->
+<!-- 					<option value="我最喜欢的歌曲？">我最喜欢的歌曲？</option> -->
+<!-- 					<option value="我最喜欢的食物？">我最喜欢的食物？</option> -->
+<!-- 					<option value="我最大的爱好？">我最大的爱好？</option> -->
+<!-- 					<option value="1">您自定义的问题？</option> -->
+ 				<select id="regist_pwd_question" name="密码提示" data-iconshadow="false" data-icon="none">
+						<option value="您的出生地是？">您的出生地是？</option>
+						<option value="您母亲的姓名是？">您母亲的姓名是？</option>
+						<option value="您父亲的姓名是？">您父亲的姓名是？</option>
+						<option value="您配偶的姓名是？">您配偶的姓名是？</option>
+						<option value="您小学校名是？">您小学校名是？</option>
+						<option value="您中学校名是？">您中学校名是？</option>
+						<option value="您大学校名是？">您大学校名是？</option>
+						<option value="我最喜欢的小说？">我最喜欢的小说？</option>
+						<option value="我最喜欢的歌曲？">我最喜欢的歌曲？</option>
+						<option value="我最喜欢的食物？">我最喜欢的食物？</option>
+						<option value="我最大的爱好？">我最大的爱好？</option>
+						<option value="1">您自定义的问题？</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain" id="regist_otherQuestionOption"
+				style="display: none;" class="hasMust">
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_otherpwdQuestion" type="text" placeholder="请输入密码提示问题"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>提示答案</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_pwdAnswer" type="text"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>验&nbsp;&nbsp;证&nbsp;&nbsp;码</label>
+				<div class="labelRightDiv verifyOut">
+					<input id="regist_passCode" type="tel" pattern="[0-9]*" maxlength="4"/> 
+					<img id="regist_passCodeImg" /> 
+					<a id="regist_refreshPassCode" href="#">看不清,换一张</a>
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset class="hasLegend">
+			<legend>详细信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_name" type="text" placeholder="请输入真实姓名,以便购票"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label> 
+<!-- 				<select id="regist_sex" class="mobiscroll" name="性别" data-role="none"> -->
+<!-- 					<option value="M">男</option> -->
+<!-- 					<option value="F">女</option> -->
+ 				<select id="regist_sex" name="性别" data-iconshadow="false" data-icon="none">
+						<option value="M">男</option>
+						<option value="F">女</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>出生日期</label> 
+				<input id="regist_bornDateShow" name="出生日期" readonly="readonly" class="right-arrow-input"/> 
+				<input id="regist_bornDate" name="出生日期" style="display:none"/>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>国家地区</label> 
+				<input id="regist_country" name="国家地区" type="text" readonly="readonly" class="right-arrow-input"/>
+				<input id="regist_country_code" type="hidden"/>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件类型</label> 
+<!-- 				<select id="regist_idType" class="mobiscroll" name="证件类型" data-role="none"> -->
+<!-- 					<option value="1">二代身份证</option> -->
+<!-- 					<option value="2">一代身份证</option> -->
+<!-- 					<option value="C">港澳通行证</option> -->
+<!-- 					<option value="G">台湾通行证</option> -->
+<!-- 					<option value="B">护照</option> -->
+				<select id="regist_idType" name="证件类型" data-iconshadow="false" data-icon="none">
+						<option value="1">二代身份证</option>
+						<option value="2">一代身份证</option>
+						<option value="C">港澳通行证</option>
+						<option value="G">台湾通行证</option>
+						<option value="B">护照</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件号码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_idNo" type="text" placeholder="请准确完整填写"/>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset class="hasLegend">
+			<legend>联系方式</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>手机号码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_mobile" type="tel"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>固定电话</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_phone" type="tel"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>电子邮件</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_email" type="email"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</label> 
+				<div class="ui-input-text pencil-input">
+				 <input id="regist_address"	type="text"/>
+				 </div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编</label> 
+				<div class="ui-input-text pencil-input">
+				 <input	id="regist_postalCode" type="number" pattern="[0-9]*"/>
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset class="hasLegend">
+			<legend>附加信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>旅客类型</label> 
+<!-- 				<select id="regist_userType" class="mobiscroll" name="旅客类型" data-role="none"> -->
+<!-- 					<option value="1">成人</option> -->
+<!-- 					<option value="2">儿童</option> -->
+<!-- 					<option value="3">学生</option> -->
+<!-- 					<option value="4">残军</option> -->
+				<select id="regist_userType" name="旅客类型" data-iconshadow="false" data-icon="none">
+						<option value="1">成人</option>
+						<option value="2">儿童</option>
+						<option value="3">学生</option>
+						<option value="4">残军</option>
+				</select>
+			</div>
+			<div id="regist_schoolOptions" style="display:none;">
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校省份</label> 
+					<input id="regist_studentProvince" name="学校省份" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="regist_studentProvince_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校名称</label>
+					<input id="regist_studentSchool" name="学校名称" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="regist_studentSchool_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label>院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_studentDepartment" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain">
+					<label>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_studentClass" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_studentNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;制</label> 
+<!-- 					<select id="regist_studentSystem" class="mobiscroll" name="学制" data-role="none"> -->
+<!-- 						<option value="1">1</option> -->
+<!-- 						<option value="2">2</option> -->
+<!-- 						<option value="3">3</option> -->
+<!-- 						<option value="4">4</option> -->
+<!-- 						<option value="5">5</option> -->
+<!-- 						<option value="6">6</option> -->
+<!-- 						<option value="7">7</option> -->
+<!-- 						<option value="8">8</option> -->
+<!-- 						<option value="9">9</option> -->
+					<select id="regist_studentSystem" name="学制" data-iconshadow="false" data-icon="none">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>入学年份</label> 
+<!-- 					<input name="入学年份" id="regist_studentEnterYear" class="i-txt right-arrow-input" /> -->
+					<select id="regist_studentEnterYear" name="入学年份" data-iconshadow="false" data-icon="none">
+        					<option value=""></option>
+       				</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label>优惠卡号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_preferenceCardNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>优惠区间</label> 
+					<input id="regist_preferenceFromStation"
+						type="text" class="right-arrow-input" readonly="readonly" class="right-arrow-input"/>
+					<input id="regist_preferenceFromStation_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;至</label>
+					 <input id="regist_preferenceToStation" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="regist_preferenceToStation_code" type="hidden"/>
+				</div>
+			</div>
+		</fieldset>
+
+		<div id="registAgreeIssue" class="reg_b">
+			<span class="chk_outSpan">
+			<input id="agreeChkbox" type="checkbox" data-role="none" checked="checked"/>
+			<span></span>
+			</span> 
+			<label for="agreeChkbox">同意服务条款</label>
+			<a href="serviceMessage.html"><img
+				src="../images/button_right.png"></a>
+		</div>
+		<div class="div_bigBtn">
+			<a id="registBtn" data-role="button" data-prefetch> 注&nbsp;册 </a>
+		</div>
+		<div></div>
+	</div>
+
+	<div data-role="footer" class="footer_bar" data-position="fixed"
+		data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+			<ul>
+				<li><a id="bookTicketTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>车票预订</a></li>
+				<li><a id="queryOrderTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>订单查询</a></li>
+				<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main>我的12306</a></li>
+				<li><a id="moreOptionsTab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">更多功能</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+

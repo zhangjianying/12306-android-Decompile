@@ -1,0 +1,108 @@
+<!--
+
+ <div id="bookTicketView" data-role="page" data-dom-cache="true">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false">
+  	<a id="exitChangeTicket" data-role="button" data-shadow="false" style="display:none;">退出改签</a>
+    <h1>车票预订</h1>
+  </div>
+
+  <div data-role="content" data-iscroll='{"useTransform":false}'>
+  <div id="roundTripBtnGroup" class="singleDoubleBtnGroup" data-role="controlgroup" data-type="horizontal">
+      <a id="singleTrip" href="#" data-role="button" data-theme="c"  class="btnText ui-btn-active ui-state-persist" >单程</a>
+      <a id="doubleTrip" href="#" data-role="button" data-theme="c"  class="btnText">往返</a>
+  </div>
+    <fieldset id="goInfo">
+      <div data-role="fieldcontain">
+        <label>出&nbsp;&nbsp;发&nbsp;&nbsp;地</label>
+        <input id="fromStationInput" type="text" readonly class="right-arrow-input"/>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label>目&nbsp;&nbsp;的&nbsp;&nbsp;地</label>
+        <input id="toStationInput" type="text" readonly class="right-arrow-input"/>
+      </div>
+
+      <div class="z-startoff-date" data-role="fieldcontain">
+        <label>出发日期</label>
+       	<select id="trainDateInput" name="选择出发日期" data-iconshadow="false" data-icon="none">
+       	</select>
+      </div>
+      
+      
+
+      <div class="z-seat-type" data-role="fieldcontain">
+        <label>席　　别</label>
+        <input id="trainCodeInput" type="text" readonly class="right-arrow-input"></input>
+      </div>
+    </fieldset>
+    
+    <fieldset id="backInfo" style="display:none;">
+      <div data-role="fieldcontain">
+        <label>返回日期</label>
+        <select id="trainDateInputBack" name="选择返回日期" data-iconshadow="false" data-icon="none">
+       	</select>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label>返回时间</label>
+        <select id="timePeriodSelectBack" name="返回时间" class="right-arrow-input" data-iconshadow="false" data-icon="none">
+          		<option value="0">00:00--24:00</option>
+          		<option value="1">00:00--06:00</option>
+         		<option value="2">06:00--12:00</option>
+          		<option value="3">12:00--18:00</option>
+          		<option value="4">18:00--24:00</option>
+        </select>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label>返回车次</label>
+        <input id="trainCodeInputBack" type="text" readonly class="right-arrow-input"></input>
+      </div>
+      
+    </fieldset>   
+    
+    
+    	<div id="trainHeadersBtnGroup" style="margin:4px 10px" data-role="controlgroup" data-type="horizontal" data-mini="true">
+	      	<a id="QB" href="#" data-role="button" data-theme="c" class="ui-btn-active ui-state-persist" >全部</a>
+	      	<a id="D" href="#" data-role="button" data-theme="c">动车</a>
+	      	<a id="Z" href="#" data-role="button" data-theme="c">Z字头</a>
+	      	<a id="T" href="#" data-role="button" data-theme="c">T字头</a>
+	      	<a id="K" href="#" data-role="button" data-theme="c">K字头</a>
+	      	<a id="QT" href="#" data-role="button" data-theme="c">其他</a>
+	 	</div>
+	 	<div class="cl"></div>
+	 	
+	 	<div id="add-fareadd-fareadd-fareadd-fare" style="margin:4px 10px" data-role="controlgroup" data-type="horizontal" data-mini="true">
+	      	
+	      	<a style='width:58px' href="javascript:;" class="addFare-bt" data-role="button" data-theme="c" >李四</a>
+	      	<a  href="javascript:;" class="addFare-bt" data-role="button" data-theme="c">王五</a>
+	      	<a  href="javascript:;" class="addFare-bt" data-role="button" data-theme="c">赵六</a>
+	      	<a  href="javascript:;" class="addFare-bt" data-role="button" data-theme="c">张三</a>
+	      	
+	      	<a  href="javascript:;" id="adFarebt" data-role="button" data-theme="b"><span class='adFarebt'>+ 乘客</span></a>
+	 	</div>
+   
+	
+	
+	
+	
+	 
+	<div class="div_bigBtn">
+		<a id="querySingleTicketBtn" data-role="button">查&nbsp;询 </a>
+	</div>
+  </div>
+
+  <div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+     <div data-role="navbar" class="f_nav">
+      <ul>
+        <li><a id="bookTicketTab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">车票预订</a></li>
+		<li><a id="queryOrderTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main="" >订单查询</a></li>
+		<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main="" >我的12306</a></li>
+		<li><a id="moreOptionsTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main="" >更多功能</a></li>
+	  </ul>
+	</div>
+  </div>
+</div>
+    
+    
+    -->

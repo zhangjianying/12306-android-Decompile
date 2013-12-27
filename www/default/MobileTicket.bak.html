@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>MobileTicket</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="css/mobiscroll-2.1.full.min.css" />   
+<link rel="stylesheet" href="css/jquery.mobile.iscrollview.css" />
+<link rel="stylesheet" href="css/jquery.mobile.iscrollview-pull.css" />
+<link rel="stylesheet" href="css/MobileTicket.css">
+<link rel="stylesheet" href="css/resize.css">
+<link rel="stylesheet" href="css/newStyle.css">
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/customize.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/jquery.mobile.iscrollview.js"></script>
+<script src="js/model/dataModel.js"></script>
+<script src="js/mobiscroll-2.1.full.min.js"></script> 
+</head>
+
+<body id="content" style="display: none; pointer-events:none;">
+
+		<div id="loginView" data-role="page">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="views/moreOption.html" data-role="button" data-shadow="false">更多功能</a>
+				<h1>12306</h1>
+			</div>
+			<div data-role="content" data-iscroll='{"useTransform":false}'>
+			 <input type="hidden" id="py" name="py" value="do not delete this line"/>
+				<fieldset>
+					<div data-role="fieldcontain">
+						<label for="usernameInput">用户名</label>
+						<div class="ui-input-text pencil-input">
+							<input id="usernameInput" type="email" placeholder="12306.cn用户名"/>
+						</div>						
+						<a id="deleteUserName" data-role="button" data-icon="delete" data-iconpos="notext" data-mini="true" data-inline="true" style="display:none;">Delete</a>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="passwordInput">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+						<div class="ui-input-text pencil-input">
+							<input id="passwordInput" type="password" placeholder="12306.cn密码"/>
+						</div>						
+						<a id="deletePassword" data-role="button" data-icon="delete" data-iconpos="notext" data-mini="true" data-inline="true" style="display:none;">Delete</a>
+					</div>
+				</fieldset>
+                <div id="credentialMiscBar">
+					<span class="chk_outSpan" style="width:80px!important"><input id="keepUsrChkbox" type="checkbox" data-role="none"/><span></span><label for="keepUsrChkbox"> 记住密码</label></span>
+					<span class="chk_outSpan"><input id="autologinChkbox" type="checkbox" data-role="none"/><span></span><label for="autologinChkbox">下次自动登录</label></span>
+					
+					<a href="views/getPwd.html">忘记密码&nbsp;<em>&gt;</em></a>
+					
+					
+				</div>
+				
+				<div id="groupBtn" data-role="controlgroup" data-type="horizontal">
+					<div>
+	  					<a id="registerBtn" class="loginButton" data-role="button">注 册</a>
+						<a id="loginBtn" class="loginButton" data-role="button">登 录</a>
+    				</div>
+    			</div>			
+	
+			</div>
+            
+            <div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+            <div data-role="navbar" class="f_nav">
+            <ul>
+                <li>
+                    <a id="bookTicketTab" href="#" data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">车票预订</a>
+                </li>
+                <li>
+                    <a id="queryOrderTab" href="#" data-icon="custom" data-iconpos="top" data-iconshadow="false">订单查询</a>
+                </li>
+                <li>
+                    <a id="my12306Tab" href="#" data-icon="custom" data-iconpos="top" data-iconshadow="false">我的12306</a>
+                </li>
+                <li>
+                    <a id="moreOptionsTab" href="views/moreOption.html" data-icon="custom" data-iconpos="top" data-iconshadow="false">更多功能</a>
+                </li>
+            </ul>
+            </div>
+            </div>
+		</div>
+	<!--application UI goes here-->
+	<script src="js/initOptions.js"></script>
+	<script src="js/MobileTicket.js"></script>
+	<script src="js/messages.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/jQuery.Hz2Py-min.js"></script>
+    <script src="js/jquery.timer.js"></script>
+    <script src="js/checkForm.js"></script>
+	<script src="js/doT.min.js"></script>
+	<script src="js/md5-min.js"></script>
+	<script src="js/childbrowser.js"></script>
+	<script src="js/CheckCodePlugin.js"></script>
+	
+	<script src="js/model/hotStation.js"></script>
+    <script src="js/model/station.js"></script>
+    <script src="js/model/promptMsg.js"></script>
+    <script src="js/model/cacheMap.js"></script>
+    <script src="js/model/country.js"></script>
+    <script src="js/model/province.js"></script>
+    <script src="js/model/university.js"></script>
+    <script src="js/model/city.js"></script>
+    <script src="js/model/serviceMsg.js"></script>
+    
+    <script src="js/controller/orderManager.js"></script>
+	<script src="js/controller/login.js"></script>
+	<script src="js/controller/bookTicket.js"></script>
+	<script src="js/controller/selectStation.js"></script>
+	<script src="js/controller/selectTrain.js"></script>
+	<script src="js/controller/searchSingleTicketResults.js"></script>
+	<!-- <script src="js/controlller/ticketDetails.js"></script> -->
+	<script src="js/controller/passengers.js"></script>
+	<script src="js/controller/selectPassenger.js"></script>   
+	<script src="js/controller/orderDetails.js"></script> 
+	<script src="js/controller/payment.js"></script>		
+    <script src="js/controller/payFinish.js"></script>
+    <script src="js/controller/queryOrder.js"></script>
+    <script src="js/controller/orderList.js"></script>        
+    <script src="js/controller/continuePayment.js"></script>       
+    <script src="js/controller/finishedOrderList.js"></script>  
+    <script src="js/controller/farePassengers.js"></script>
+    <script src="js/controller/fareList.js"></script> 
+     
+    <script src="js/controller/finishedOrderDetail.js"></script>    
+    <script src="js/controller/advanceQueryOrder.js"></script>   
+    <script src="js/controller/cancelOrder.js "></script>             
+    <script src="js/controller/moreOption.js"></script>
+    <script src="js/controller/my12306.js"></script>
+	<script src="js/controller/stationSet.js"></script>
+	<script src="js/controller/passengerList.js"></script> 
+    <script src="js/controller/changePwd.js"></script>
+    <script src="js/controller/userInfo.js"></script>
+    <script src="js/controller/modifyUserInfo.js"></script>
+    <script src="js/controller/modifyPassenger.js"></script>
+    <script src="js/controller/regist.js"></script>
+    
+    
+<!--     单页注册 -->
+<!--     <script src="js/controller/regist_basicInfo.js"></script> -->
+<!--     <script src="js/controller/regist_detailsInfo.js"></script> -->
+<!--     <script src="js/controller/regist_otherInfo.js"></script> -->
+<!--     <script src="js/controller/regist_relationType.js"></script> -->
+    
+    <script src="js/controller/serviceMessage.js"></script>
+    <script src="js/controller/selectCountry.js"></script>
+    <script src="js/controller/selectProvince.js"></script>
+    <script src="js/controller/selectUniversity.js"></script>
+    <script src="js/controller/selectCity.js"></script>
+    <script src="js/controller/suggestion.js"></script>
+    <script src="js/controller/settings.js"></script>
+    <script src="js/controller/getPwd.js"></script>
+    <script src="js/controller/about.js"></script>
+</body>
+</html>

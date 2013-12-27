@@ -1,0 +1,91 @@
+<div id="registView_details" data-role="page" data-dom-cache="true">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a id="registBack_DetailsBtn" data-role="button" data-shadow="false"><span id="registBack_DetailsValue">更多功能</span></a>
+		<h1>注册</h1>
+	</div>
+
+<div data-role="content" data-iscroll='{"useTransform":false}'>
+	<fieldset class="hasLegend">
+			<legend>详细信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_name" type="text" placeholder="请输入真实姓名,以便购票"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label> 
+				<select id="regist_sex" class="mobiscroll" name="性别" data-role="none">
+					<option value="M">男</option>
+					<option value="F">女</option>
+				<!-- <select id="regist_sex" name="性别" data-iconshadow="false" data-icon="none">
+						<option value=""></option>
+						<option value="M">男</option>
+						<option value="F">女</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>出生日期</label> 
+				<input id="regist_bornDateShow" name="出生日期" type="text" readonly="readonly" class="right-arrow-input"/> 
+				<input id="regist_bornDate" name="出生日期" style="display:none"/>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>国家地区</label> 
+				<input id="regist_country" name="国家地区" type="text" readonly="readonly" class="right-arrow-input"/>
+				<input id="regist_country_code" type="hidden"/>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件类型</label> 
+				<select id="regist_idType" class="mobiscroll" name="证件类型" data-role="none">
+					<option value="1">二代身份证</option>
+					<option value="2">一代身份证</option>
+					<option value="C">港澳通行证</option>
+					<option value="G">台湾通行证</option>
+					<option value="B">护照</option>
+				<!--<select id="regist_idType" name="证件类型" data-iconshadow="false" data-icon="none">
+						<option value="1">二代身份证</option>
+						<option value="2">一代身份证</option>
+						<option value="C">港澳通行证</option>
+						<option value="G">台湾通行证</option>
+						<option value="B">护照</option>
+					-->
+				</select>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件号码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_idNo" type="text" placeholder="请准确完整填写"/>
+				</div>
+			</div>
+		</fieldset>
+		<div data-role="controlgroup" data-type="horizontal">
+					<div>
+	  					<a id="regist_detailsBackBtn" class="loginButton" data-role="button" data-prefetch>上一步</a>
+						<a id="regist_detailsNextBtn" class="loginButton" data-role="button" data-prefetch>下一步</a>
+    				</div>
+    			</div>	
+<!-- 		<div class="div_bigBtn"> -->
+			
+<!-- 			<a id="regist_detailsBackBtn" data-role="button" data-prefetch> 上一步</a> -->
+<!-- 			<a id="regist_detailsNextBtn" data-role="button" data-prefetch> 下一步 </a> -->
+<!-- 		</div> -->
+		</div>
+		
+		<div data-role="footer" class="footer_bar" data-position="fixed"
+		data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+			<ul>
+				<li><a id="bookTicketTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>车票预订</a></li>
+				<li><a id="queryOrderTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>订单查询</a></li>
+				<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main>我的12306</a></li>
+				<li><a id="moreOptionsTab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">更多功能</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+		

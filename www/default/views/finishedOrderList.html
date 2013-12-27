@@ -1,0 +1,37 @@
+<div id="FinishedOrderListView" data-role="page">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a id="finishedOrderListViewBackBtn" data-role="button" data-shadow="false" class="head-btn-short">订&nbsp;单</a>
+		<h1 id="finishedOrderListHeader"></h1>
+	</div>
+	
+	<div id="orderPrompt" style="display:none;" data-iscroll-fixed>
+	  <div class="ui-grid-b top-prompt normal-prompt">
+	    <div class="ui-block-a">查询结果（<span id="orderLength"></span>）</div>
+	  </div>
+  	</div>
+	
+	<div data-role="content" id="orderList_content" data-iscroll>
+		<div id="iscroll-pulldown" class="iscroll-pulldown" style="display:none;">
+	    	<span class="iscroll-pull-icon"></span>
+            <span class="iscroll-pull-label" data-iscroll-loading-text="加载中..." data-iscroll-pulled-text="释放刷新...">下划刷新...</span>
+	    </div>     
+		
+		<ul id="finishedOrderList" data-role="listview" style="background-color: white;"></ul>
+    	
+    	<div class="iscroll-pullup" id="orderList-pullup" style="display:none;">
+	    	<span class="iscroll-pull-icon"></span>
+            <span class="iscroll-pull-label" data-iscroll-loading-text="加载中..." data-iscroll-pulled-text="释放刷新...">上划加载更多...</span>
+	    </div>   
+	</div>
+	
+	<div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+     <div data-role="navbar" class="f_nav">
+	      <ul>
+	        <li><a id="bookTicketTab"  data-icon="custom" data-iconshadow="false" data-iconpos="top" >车票预订</a></li>
+	        <li><a id="queryOrderTab"  data-icon="custom" data-iconshadow="false" data-iconpos="top" class="ui-btn-active ui-state-persist" >订单查询</a></li>
+	        <li><a id="my12306Tab"  data-icon="custom" data-iconshadow="false" data-iconpos="top">我的12306</a></li>
+	        <li><a id="moreOptionsTab"  data-icon="custom" data-iconshadow="false" data-iconpos="top">更多功能</a></li>
+	      </ul>
+	    </div>
+	</div>
+</div>

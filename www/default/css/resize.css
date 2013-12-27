@@ -1,0 +1,6 @@
+
+/* Stylesheet content from css/resize.css in folder common */
+@media (min-width: 450px) {
+	.ui-field-contain input.nolabel {width:98%; margin:0 auto; display:block;}
+	.ui-field-contain input.pencil-input, .ui-field-contain input.right-arrow-input {}
+}

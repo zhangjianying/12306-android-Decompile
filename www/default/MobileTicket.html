@@ -1,0 +1,245 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="telephone=no" name="format-detection">
+        <title>MobileTicket</title>
+        <link href="wlclient/css/wlclient.css" rel="stylesheet">
+        <link href="wlclient/css/wlgap.android.css" rel="stylesheet">
+        <link href="css/jquery.mobile-1.2.0.min.css" rel="stylesheet">
+        <link href="css/mobiscroll-2.1.full.min.css" rel="stylesheet">   
+        <link href="css/jquery.mobile.iscrollview.css" rel="stylesheet">
+        <link href="css/jquery.mobile.iscrollview-pull.css" rel="stylesheet">
+        <link href="css/MobileTicket.css" rel="stylesheet">
+        <link href="css/resize.css" rel="stylesheet">
+        <link href="css/newStyle.css" rel="stylesheet">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "MobileTicket",
+   "APP_ID": "MobileTicket",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.21",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_PLATFORM_VERSION": "6.0.0",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/MobileTicket\/android\/"
+};</script>
+		<script src="wlclient/js/cordova.js"></script>
+		<script src="common/js/wljq.js"></script>
+		<script src="common/js/wl_.min.js"></script>
+		<script src="common/js/sjcl.min.js"></script>
+		<script src="wlclient/js/analytics/Tealeaf.min.js"></script>
+		<script src="common/js/stacktrace.min.js"></script>
+		<script src="common/js/base.js"></script>
+		<script src="wlclient/js/messages.js"></script>
+		<script src="common/js/wlcommon.js"></script>
+		<script src="wlclient/js/diagnosticDialog.js"></script>
+		<script src="wlclient/js/deviceAuthentication.js"></script>
+		<script src="wlclient/js/window.js"></script>
+		<script src="wlclient/js/worklight.js"></script>
+		<script src="wlclient/js/wlclient.js"></script>
+		<script src="wlclient/js/wlfragments.js"></script>
+		<script src="wlclient/js/encryptedcache.js"></script>
+		<script src="wlclient/js/analytics/analytics.js"></script>
+		<script src="wlclient/js/checksum.js"></script>
+		<script src="wlclient/js/deviceSensors/triggers.js"></script>
+		<script src="wlclient/js/deviceSensors/acquisition.js"></script>
+		<script src="wlclient/js/deviceSensors/geo.js"></script>
+		<script src="wlclient/js/deviceSensors/wifi.js"></script>
+		<script src="wlclient/js/events/eventTransmitter.js"></script>
+		<script src="wlclient/js/deviceSensors/bind.js"></script>
+		<script src="wlclient/js/deviceSensors/geoUtilities.js"></script>
+		<script src="wlclient/js/challengeHandlers/antiXSRFChallengeHandler.js"></script>
+		<script src="wlclient/js/challengeHandlers/authenticityChallengeHandler.js"></script>
+		<script src="wlclient/js/challengeHandlers/deviceAuthAutoProvisioningChallengeHandler.js"></script>
+		<script src="wlclient/js/challengeHandlers/deviceAuthNoProvisioningChallengeHandler.js"></script>
+		<script src="wlclient/js/challengeHandlers/remoteDisableChallengeHandler.js"></script>
+		<script src="wlclient/js/deviceSensors/ExtendedGeolocation.js"></script>
+		<script src="wlclient/js/features_stubs/jsonstore_stub.js"></script>
+		<script src="wlclient/js/wlgap.android.js"></script>
+		<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/customize.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/jquery.mobile.iscrollview.js"></script>
+<script src="js/model/dataModel.js"></script>
+<script src="js/mobiscroll-2.1.full.min.js"></script> 
+    </head>
+    <body id="content" style="display: none; pointer-events:none;">
+        <div data-dom-cache="true" data-role="page" id="bookTicketView">
+            <div data-position="fixed" data-role="header" data-tap-toggle="false">
+                <a data-role="button" data-shadow="false" id="exitChangeTicket" style="display:none;">退出改签</a>
+                <h1>车票预订</h1>
+            </div>
+            <div data-iscroll="{&quot;useTransform&quot;:false}" data-role="content">
+                <div class="singleDoubleBtnGroup" data-role="controlgroup" data-type="horizontal" id="roundTripBtnGroup">
+                    <a class="btnText ui-btn-active ui-state-persist" data-role="button" data-theme="c" href="#" id="singleTrip">单程</a>
+      <a class="btnText" data-role="button" data-theme="c" href="#" id="doubleTrip">往返</a>
+                </div>
+                <input id="py" name="py" type="hidden" value="do not delete this line">
+                <fieldset id="goInfo">
+                    <div style="padding-left:0px; position:relative">
+                        <div data-role="fieldcontain">
+                            <label>出发地&nbsp;<span id="changeSeat"></span>&nbsp;&nbsp;&nbsp;</label>
+        <input class="right-arrow-input" id="fromStationInput" readonly type="text">
+                        </div>
+                        <div data-role="fieldcontain">
+                            <label>目的地&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input class="right-arrow-input" id="toStationInput" readonly type="text">
+                        </div>
+                    </div>
+                    <div style="clear:both; top:72px;"></div>
+                    <div class="z-startoff-date" data-role="fieldcontain">
+                        <label>出发日期</label>
+       	<select data-icon="none" data-iconshadow="false" id="trainDateInput" name="选择出发日期">
+       	</select>
+                    </div>
+                    <div class="z-seat-type" data-role="fieldcontain">
+                        <label>席　　别</label>
+        <select data-icon="none" data-iconshadow="false" id="trainSeatInput" name="选择席别">
+       	</select>
+                    </div>
+                </fieldset>
+                <fieldset id="backInfo" style="display:none;">
+                    <div data-role="fieldcontain">
+                        <label>返回日期</label>
+        <select data-icon="none" data-iconshadow="false" id="trainDateInputBack" name="选择返回日期">
+       	</select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label>返回席别</label>
+        <select data-icon="none" data-iconshadow="false" id="trainSeatInputBack" name="选择席别">
+       	</select>
+        <!-- <input id="trainCodeInputBack" type="text" readonly class="right-arrow-input"></input> -->
+                    </div>    
+                </fieldset>   
+                <fieldset style="background:none; ">
+                    <div data-mini="true" data-role="controlgroup" data-type="horizontal" id="trainHeadersBtnGroup">
+                        <a class="ui-btn-active ui-state-persist" data-role="button" data-theme="c" href="#" id="QB">全部</a>
+	      	<a data-role="button" data-theme="c" href="#" id="D">G/D/C</a>
+	      	<a data-role="button" data-theme="c" href="#" id="Z">Z字头</a>
+	      	<a data-role="button" data-theme="c" href="#" id="T">T字头</a>
+	      	<a data-role="button" data-theme="c" href="#" id="K">K字头</a>
+	      	<a data-role="button" data-theme="c" href="#" id="QT">其他</a>
+                    </div>
+                </fieldset>
+                <fieldset style="background:none;margin-top:0;padding-top:0">
+                    <div data-mini="true" data-role="controlgroup" data-type="horizontal" id="FareHeadersBtnGroup">
+                    </div>
+                </fieldset>
+                <div style="display: box; display: -webkit-box;margin-bottom:20px">
+                    <div style="box-flex: 1; -webkit-box-flex: 1;">
+                        <div class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal ui-mini" data-mini="true" data-role="controlgroup" data-type="horizontal" id="TicketTypeBtnGroup">
+                            <div class="ui-controlgroup-controls">
+                                <a class="ui-btn ui-corner-left  ui-btn-up-c ui-btn-active" data-role="button" data-theme="c" data-type="1" href="#">普通</a> <a class="ui-btn ui-btn-up-c" data-role="button" data-theme="c" data-type="2" href="#">学生</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="box-flex: 1; -webkit-box-flex: 1; width: 150px;">
+                        <div class="div_bigBtn">
+                            <a data-role="button" id="querySingleTicketBtn">查&nbsp;询 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bar" data-id="navBar" data-position="fixed" data-role="footer" data-tap-toggle="false">
+                <div class="f_nav" data-role="navbar">
+                    <ul>
+                        <li>
+                            <a class="ui-btn-active ui-state-persist" data-icon="custom" data-iconpos="top" data-iconshadow="false" id="bookTicketTab">车票预订</a>
+                        </li>
+                        <li>
+                            <a data-icon="custom" data-iconpos="top" data-iconshadow="false" id="queryOrderTab" main="">订单查询</a>
+                        </li>
+                        <li>
+                            <a data-icon="custom" data-iconpos="top" data-iconshadow="false" id="my12306Tab" main="">我的12306</a>
+                        </li>
+                        <li>
+                            <a data-icon="custom" data-iconpos="top" data-iconshadow="false" id="moreOptionsTab" main="">更多功能</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	<!--application UI goes here-->
+        <script src="js/storage.js"></script>
+	<script src="js/initOptions.js"></script>
+     <script src="js/model/station.js"></script>
+	<script src="js/MobileTicket.js"></script>
+	<script src="js/messages.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/jQuery.Hz2Py-min.js"></script>
+    <script src="js/jquery.timer.js"></script>
+    <script src="js/checkForm.js"></script>
+	<script src="js/doT.min.js"></script>
+	<script src="js/md5-min.js"></script>
+	<script src="js/childbrowser.js"></script>
+	<script src="js/CheckCodePlugin.js"></script>
+	<script src="js/model/hotStation.js"></script>
+    <script src="js/model/promptMsg.js"></script>
+    <script src="js/model/cacheMap.js"></script>
+    <script src="js/model/country.js"></script>
+    <script src="js/model/province.js"></script>
+    <script src="js/model/university.js"></script>
+    <script src="js/model/city.js"></script>
+    <script src="js/controller/orderManager.js"></script>
+	<script src="js/controller/login.js"></script>
+	<script src="js/controller/bookTicket.js"></script>
+	<script src="js/controller/selectStation.js"></script>
+	<script src="js/controller/selectTrain.js"></script>
+	<script src="js/controller/searchSingleTicketResults.js"></script>
+	<script src="js/controller/offLinePayFinish.js"></script>
+	<script src="js/controller/offLinePayFinishEnter.js"></script>
+	<!-- 
+    <script src="js/controlller/ticketDetails.js"></script>
+	<script src="js/controller/passengers.js"></script>
+     -->
+    <script src="js/controller/stationSet.js"></script>
+	<script src="js/controller/selectPassenger.js"></script>   
+	<script src="js/controller/orderDetails.js"></script> 
+	<script src="js/controller/payment.js"></script>		
+    <script src="js/controller/payFinish.js"></script>
+    <script src="js/controller/queryOrder.js"></script>
+    <script src="js/controller/orderList.js"></script>        
+    <script src="js/controller/continuePayment.js"></script>       
+    <script src="js/controller/finishedOrderList.js"></script>  
+    <script src="js/controller/farePassengers.js"></script>
+    <script src="js/controller/fareList.js"></script> 
+    <script src="js/controller/finishedOrderDetail.js"></script>    
+    <script src="js/controller/advanceQueryOrder.js"></script>   
+    <script src="js/controller/cancelOrder.js "></script>             
+    <script src="js/controller/moreOption.js"></script>
+    <script src="js/controller/my12306.js"></script>
+	<script src="js/controller/passengerList.js"></script> 
+    <script src="js/controller/changePwd.js"></script>
+    <script src="js/controller/userInfo.js"></script>
+    <script src="js/controller/modifyUserInfo.js"></script>
+    <script src="js/controller/modifyPassenger.js"></script>
+    <script src="js/controller/regist.js"></script>
+<!--     单页注册 -->
+<!--     <script src="js/controller/regist_basicInfo.js"></script> -->
+<!--     <script src="js/controller/regist_detailsInfo.js"></script> -->
+<!--     <script src="js/controller/regist_otherInfo.js"></script> -->
+<!--     <script src="js/controller/regist_relationType.js"></script> -->
+    <script src="js/controller/serviceMessage.js"></script>
+    <script src="js/controller/selectCountry.js"></script>
+    <script src="js/controller/selectProvince.js"></script>
+    <script src="js/controller/selectUniversity.js"></script>
+    <script src="js/controller/selectCity.js"></script>
+    <script src="js/controller/suggestion.js"></script>
+    <script src="js/controller/settings.js"></script>
+    <script src="js/controller/getPwd.js"></script>
+    <script src="js/controller/about.js"></script>
+<!--
+    <script src="js/controller/autologin.js"></script>
+-->
+    </body>
+</html>

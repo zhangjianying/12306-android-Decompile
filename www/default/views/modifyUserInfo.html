@@ -1,0 +1,281 @@
+<div id="modifyuserInfoView" data-role="page" data-dom-cache="true">
+	<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+		<a id="modifyuserInfoBackBtn" data-role="button" data-shadow="false">取消</a>
+		<h1>个人资料</h1>
+		<a id="confirmUserInfoModifyBtn" data-role="button">完成</a>
+	</div>
+
+	<div data-role="content"  data-iscroll='{"useTransform":false}'>
+
+		<fieldset class="hasLegend">
+			<legend>基本信息</legend>
+
+			<div data-role="fieldcontain">
+				<label>用&nbsp;&nbsp;户&nbsp;&nbsp;名</label>
+				<div class="labelRightDiv" id="modify_username"></div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_passwd" type="password" placeholder="不少于6位"></input>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label class="toolong">语言查询<br>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+				<div class="ui-input-text pencil-input">
+				<input id="modify_languagePasswd" type="password" placeholder="6位数字"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>密码提示</label> 
+				<!-- <select id="modify_pwdPrompt" class="mobiscroll" name="密码提示" data-iconshadow="false" data-icon="none" data-role="none"> -->
+				<select id="modify_pwdPrompt" name="密码提示" data-iconshadow="false" data-icon="none">
+						<option value="您的出生地是？">您的出生地是？</option>
+						<option value="您母亲的姓名是？">您母亲的姓名是？</option>
+						<option value="您父亲的姓名是？">您父亲的姓名是？</option>
+						<option value="您配偶的姓名是？">您配偶的姓名是？</option>
+						<option value="您小学校名是？">您小学校名是？</option>
+						<option value="您中学校名是？">您中学校名是？</option>
+						<option value="您大学校名是？">您大学校名是？</option>
+						<option value="我最喜欢的小说？">我最喜欢的小说？</option>
+						<option value="我最喜欢的歌曲？">我最喜欢的歌曲？</option>
+						<option value="我最喜欢的食物？">我最喜欢的食物？</option>
+						<option value="我最大的爱好？">我最大的爱好？</option>
+						<option value="1">您自定义的问题？</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain" id="otherpwdPromptOption"	style="display: none;">
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<div class="ui-input-text pencil-input">
+				<input id="modify_otherpwdPrompt" type="text"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>提示答案</label>
+				<div class="ui-input-text pencil-input">
+				<input id="modify_pwdQuestion" type="text"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>验&nbsp;&nbsp;证&nbsp;&nbsp;码</label>
+				<div class="labelRightDiv verifyOut">
+					<input id="modify_passCode" type="tel" pattern="[0-9]*" maxlength="4"/>
+					<img id="passCodeImg" /> <a id="refreshPassCode">看不清,换一张</a>
+				</div>
+			</div>
+
+
+		</fieldset>
+
+		<fieldset class="hasLegend">
+        <legend>详细信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+				<div class="ui-input-text pencil-input">
+				<input id="modify_name" type="text" placeholder="请输入真实姓名,以便购票"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+				<!-- <select id="modify_sex" class="mobiscroll" name="性别" data-role="none">
+					<option value="M">男</option>
+					<option value="F">女</option> -->
+				<select id="modify_sex" name="性别" data-iconshadow="false" data-icon="none">
+						<option value="M">男</option>
+						<option value="F">女</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>出生日期</label> 
+				<input id="modify_bornDateShow" name="出生日期" readonly="readonly" class="right-arrow-input"/>    
+				<input id="modify_bornDate" name="出生日期" style="display:none"/>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>国家地区</label> 
+				<input id="modify_country" name="国家地区" type="text" readonly="readonly" class="right-arrow-input"/>
+				<input id="modify_country_code"  type="hidden"></input>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件类型</label> 
+				<!-- <select id="modify_idType" class="mobiscroll" name="证件类型" data-role="none">
+					<option value="1">二代身份证</option>
+					<option value="2">一代身份证</option>
+					<option value="C">港澳通行证</option>
+					<option value="G">台湾通行证</option>
+					<option value="B">护照</option> -->
+				<select id="modify_idType" name="证件类型" data-iconshadow="false" data-icon="none">
+						<option value="1">二代身份证</option>
+						<option value="2">一代身份证</option>
+						<option value="C">港澳通行证</option>
+						<option value="G">台湾通行证</option>
+						<option value="B">护照</option>
+				</select>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>证件号码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_idNo" type="text"	placeholder="请准确完整填写"/>
+				</div>
+			</div>
+
+
+		</fieldset>
+
+		 <fieldset class="hasLegend">
+        <legend>联系方式</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>手机号码</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_mobile" type="tel" placeholder="用于接收铁路客户服务信息"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>固定电话</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_phone" type="tel"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label>电子邮件</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_email" type="email"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_address" type="text"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain">
+				<label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="modify_postalCode" type="number" pattern="[0-9]*"/>
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset class="hasLegend">
+        <legend>附加信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>旅客类型</label> 
+				<!-- <select id="modify_userType" class="mobiscroll" name="旅客类型" data-role="none">
+					<option value="1">成人</option>
+					<option value="2">儿童</option>
+					<option value="3">学生</option>
+					<option value="4">残军</option> -->
+				<select id="modify_userType" name="旅客类型" data-iconshadow="false" data-icon="none">
+						<option value="1">成人</option>
+						<option value="2">儿童</option>
+						<option value="3">学生</option>
+						<option value="4">残军</option>
+				</select>
+			</div>
+			<div id="schoolOptions" style="display: none;">
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校省份</label> 
+					<input id="modify_studentProvince" name="学校省份" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="modify_studentProvince_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校名称</label>
+					<input id="modify_studentSchool" name="学校名称" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="modify_studentSchool_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label>院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_studentDepartment" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain">
+					<label>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_studentClass" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_studentNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;制</label> 
+					<!-- <select id="modify_studentSystem" class="mobiscroll" name="学制" data-role="none">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option> -->
+					<select id="modify_studentSystem" name="学制" data-iconshadow="false" data-icon="none">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>入学年份</label> 
+					<!-- <input name="入学年份" id="modify_studentEnterYear" class="i-txt right-arrow-input" /> -->
+					<select id="modify_studentEnterYear" name="入学年份" data-iconshadow="false" data-icon="none">
+        					<option value=""></option>
+       				</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label>优惠卡号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="modify_preferenceCardNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>优惠区间</label> 
+					<input id="modify_preferenceFromStation" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="modify_preferenceFromStation_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;至</label> 
+					<input id="modify_preferenceToStation" type="text" readonly="readonly"  class="right-arrow-input"/>
+					<input id="modify_preferenceToStation_code" type="hidden"/>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+			<ul>
+				<li><a id="bookTicketTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main>车票预订</a></li>
+				<li><a id="queryOrderTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main>订单查询</a></li>
+				<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">我的12306</a></li>
+				<li><a id="moreOptionsTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main>更多功能</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,38 @@
+
+/* Stylesheet content from css/images/orderDetails.css in folder common */
+@CHARSET "UTF-8";
+
+#orderDetailsPrompt {
+  text-align: left;
+}
+
+#ticketDetailsGrid > div {
+  background-color: white;
+  border-radius: 0.3em;
+  margin: 5px 0px;
+  padding: 5px;
+}
+
+#ticketPriceInfo {
+  margin: 10px 0px;
+  font-size: 14px;
+  font-weight:bold;
+  width:100%;
+}
+
+#ticketPriceInfo > div {
+  display: inline-block;
+}
+
+.seat-info > span {
+  display: inline-block;
+  width: 20%;
+  border-right: 1px dotted #d7ad7b; 
+  
+}
+.passenger-info >span{
+  display: inline-block;
+  width: 20%;
+  border-right: 1px dotted #d7ad7b; 
+
+}

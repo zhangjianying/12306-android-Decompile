@@ -1,0 +1,99 @@
+<div id="registView_basicInfo" data-role="page" data-dom-cache="true">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a id="registBack_BasicBtn" data-role="button" data-shadow="false"><span id="registBack_BasciValue">更多功能</span></a>
+		<h1>注册</h1>
+	</div>
+	
+	<div data-role="content" data-iscroll='{"useTransform":false}'>
+		<fieldset class="hasMust hasLegend">
+			<legend>基本信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="regist_user_name">用&nbsp;&nbsp;户&nbsp;&nbsp;名</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_user_name" type="text" placeholder="字母、数字或“_”，6-30位"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="regist_passwd">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+				<div class="ui-input-text pencil-input">
+				<input id="regist_passwd" type="password" placeholder="不少于6位"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="regist_confirmPasswd">密码确认</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_confirmPasswd" type="password" placeholder="请再次输入密码"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="regist_ivrPasswd" class="toolong">语音查询<br>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+				<div class="ui-input-text pencil-input">
+				<input id="regist_ivrPasswd" type="password" placeholder="6位数字" maxlength="6"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="regist_confirmivrPasswd" class="toolong">语音查询<br>密码确认</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_confirmivrPasswd" type="password" placeholder="再次输入语音查询密码" maxlength="6"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="regist_pwd_question">密码提示</label> 
+				<select id="regist_pwd_question" class="mobiscroll" name="密码提示" data-role="none">
+					<option value="">请选择密码提示问题</option>
+					<option value="您的出生地是？">您的出生地是？</option>
+					<option value="您母亲的姓名是？">您母亲的姓名是？</option>
+					<option value="您父亲的姓名是？">您父亲的姓名是？</option>
+					<option value="您配偶的姓名是？">您配偶的姓名是？</option>
+					<option value="您小学校名是？">您小学校名是？</option>
+					<option value="您中学校名是？">您中学校名是？</option>
+					<option value="您大学校名是？">您大学校名是？</option>
+					<option value="我最喜欢的小说？">我最喜欢的小说？</option>
+					<option value="我最喜欢的歌曲？">我最喜欢的歌曲？</option>
+					<option value="我最喜欢的食物？">我最喜欢的食物？</option>
+					<option value="我最大的爱好？">我最大的爱好？</option>
+					<option value="1">您自定义的问题？</option>
+				
+				</select>
+			</div>
+
+			<div data-role="fieldcontain" id="regist_otherQuestionOption"
+				style="display: none;" class="hasMust">
+				<label for="regist_otherpwdQuestion">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_otherpwdQuestion" type="text" placeholder="请输入密码提示问题"/>
+				</div>
+			</div>
+
+			<div data-role="fieldcontain" class="hasMust">
+				<label for="regist_pwdAnswer">提示答案</label> 
+				<div class="ui-input-text pencil-input">
+				<input id="regist_pwdAnswer" type="text"/>
+				</div>
+			</div>
+
+		</fieldset>
+		
+		<div class="div_bigBtn">
+			<a id="regist_basicNextBtn" data-role="button" data-prefetch> 下一步 </a>
+		</div>
+	</div>
+
+	<div data-role="footer" class="footer_bar" data-position="fixed"
+		data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+			<ul>
+				<li><a id="bookTicketTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>车票预订</a></li>
+				<li><a id="queryOrderTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>订单查询</a></li>
+				<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main>我的12306</a></li>
+				<li><a id="moreOptionsTab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">更多功能</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>

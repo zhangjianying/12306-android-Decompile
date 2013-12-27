@@ -1,0 +1,46 @@
+<div id="settingsView" data-role="page">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a id="settingsBackBtn" data-role="button" data-shadow="false">更多功能</a>
+		<h1>设置</h1>
+	</div>
+
+
+	<div data-role="content" data-iscroll='{"useTransform":false}'>
+		<div></div>
+		<div class="tips">
+			<span>您可以设置以下缺省信息</span>
+		</div>
+		<fieldset>
+			<div data-role="fieldcontain">
+				<label>出&nbsp;&nbsp;发&nbsp;&nbsp;地</label>
+				<input id="setting_from_station" type="text" class="right-arrow-input" readonly="readonly"/>
+			</div>
+			<div data-role="fieldcontain"> 
+				<label>目&nbsp;&nbsp;的&nbsp;&nbsp;地</label> 
+				<input id="setting_to_station" type="text" class="right-arrow-input" readonly="readonly"/>
+			</div>
+			<div data-role="fieldcontain">
+				<label>出发日期</label> 
+				<select name="出发日期" id="setting_train_date" data-iconshadow="false" data-icon="none">
+						<option value="0">当天</option>
+						<option value="1" selected>第二天</option>
+						<option value="2">第三天</option>
+						<option value="3">第四天</option>
+				</select>
+			</div>
+		</fieldset>
+	</div>
+
+
+	<div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+			<ul>
+				<li><a id="bookTicketTab" data-icon="custom" data-iconshadow="false" data-iconpos="top">车票预订</a></li>
+				<li><a id="queryOrderTab" data-icon="custom" data-iconshadow="false" data-iconpos="top">订单查询</a></li>
+				<li><a id="my12306Tab"  data-icon="custom" data-iconshadow="false" data-iconpos="top">我的12306</a></li>
+				<li><a id="moreOptionsTab"  data-icon="custom" data-iconshadow="false" class="ui-btn-active ui-state-persist" data-iconpos="top">更多功能</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>

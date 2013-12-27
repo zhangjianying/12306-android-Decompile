@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MobileTicket</title>
+        <script>
+        function onloadSubmit(){
+        var request = 
+	      { 
+		        QueryString : function(val) 
+		      { 
+		      var uri = window.location.search; 
+		      var re = new RegExp("" +val+ "=([^&?]*)", "ig"); 
+		      return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null); 
+		      } 
+	      } 
+	      var interfaceName = request.QueryString("interfaceName");
+	      var interfaceVersion = request.QueryString("interfaceVersion");
+	      var tranData = decodeURIComponent(request.QueryString("tranData"));
+	      var merSignMsg = request.QueryString("merSignMsg");
+	      var appId = request.QueryString("appId");
+	      var transType = request.QueryString("transType");
+	      var epayurl = request.QueryString("epayurl");
+	      document.getElementById("interfaceName").value=interfaceName;
+	      document.getElementById("interfaceVersion").value=interfaceVersion;
+	      document.getElementById("tranData").value=tranData;
+	      document.getElementById("merSignMsg").value=merSignMsg;
+	      document.getElementById("appId").value=appId;
+	      document.getElementById("transType").value=transType;
+	      if(epayurl!=null){
+	    	  
+	      }
+	      document.getElementById("paymentForm").submit();
+        }
+        </script>
+    </head>
+    <body onload="onloadSubmit();">
+  <div>
+  <div>
+     Loading...
+  </div>
+  <form method="post" id="paymentForm" name="paymentForm" action="https://www.chinarailway-pay.com/pay/wapPayGateway" data-ajax="false">
+     <input type="hidden" id="interfaceName" name="interfaceName" value="PAY_SERVLET"/>
+     <input type="hidden" id="interfaceVersion" name="interfaceVersion" value="1.0"/>
+     <input type="hidden" id="tranData" name="tranData" value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iR0JLIj8+CjxQYXlSZXE+PGludGVyZmFjZU5h\r\nbWU+UEFZX1NFUlZMRVQ8L2ludGVyZmFjZU5hbWU+PGludGVyZmFjZVZlcnNpb24+MS4wPC9pbnRl\r\ncmZhY2VWZXJzaW9uPjxvcmRlckRhdGU+MjAxMjA3MDMxNjAzMDk8L29yZGVyRGF0ZT48b3JkZXJU\r\naW1lb3V0RGF0ZT4yMDEyMDcwMzE2MzMwOTwvb3JkZXJUaW1lb3V0RGF0ZT48b3JkZXJJZD4xRTE1\r\nMTcwMDAwMzAwMTAwMTE2MDMwOTU4MDwvb3JkZXJJZD48YW1vdW50PjY5MDA8L2Ftb3VudD48YXBw\r\nSWQ+MDAwMTwvYXBwSWQ+PGN1clR5cGU+MTU2PC9jdXJUeXBlPjxvcmRlclJlbWFyay8+PG1lclVS\r\nTD5odHRwOi8vMTI0LjIwNy4zMy41Nzo4MTgwL290c21vYmlsZS9lcGF5UGFnZS9lcGF5P3VzZXJf\r\nbmFtZT1lR2x1WjJkcU13PT0mYW1wO3NlcXVlbmNlX25vPVJURTFNVGN3TURBd013PT0mYW1wO3Bh\r\neU9yZGVySUQ9TVVVeE5URTNNREF3TURNd01ERXdNREV4TmpBek1EazFPREE9JmFtcDtyZWRpcmVj\r\ndFVSTD1hSFIwY0Rvdkx6WXhMakl6TWk0MUxqSTFPamc0T0RBdmIzUnpkMlZpTDI5eVpHVnlMMlZP\r\nYjNScFpubEJZM1JwYjI0dVpHOC9iV1YwDQphRzlrUFhGMVpYSjVUWGxQY21SbGNsTjBZWFJwWXla\r\nelpYRjFaVzVqWlY5dWJ6MUZNVFV4TnpBd01EQXomYW1wO3BheVN0YXJ0PU1RPT0mYW1wO2JhdGNo\r\nX25vPU1RPT08L21lclVSTD48YXBwVVJMPmh0dHBzOi8vMTAuMS4yNDcuMjEwOjkxNjMvb3RzcGF5\r\nL29yZGVyL2VOb3RpZnlBY3Rpb24uZG8/bWV0aG9kPWVwYXlOb3RpZnk8L2FwcFVSTD48aW5uZXJV\r\nUkw+aHR0cDovLzEwLjEuMjQ0LjQ0OjgyMDcvb3Rzd3MvcGF5Q2FsbEJhY2s8L2lubmVyVVJMPjxt\r\nZXJWQVI+ZUdsdVoyZHFNem8yVUVGa1ZWVTRPR2g2TkhGaE1UTlJNRkpXVmxsc05VeFFlbVJqYVU0\r\nNlJURTFNVGN3TURBd016b3hPakU2TVRNMg0KT1RNd05EWTFNelk2T2pvPTwvbWVyVkFSPjx0cmFu\r\nc1R5cGU+MDE8L3RyYW5zVHlwZT48L1BheVJlcT4="/>
+     <input type="hidden" id="merSignMsg" name="merSignMsg" value="and6yED//EMq9aekK1/sCbDJHsMbC0kkqGhX2HGgFfd9IWIKn7M4jbElojYVfZhPhlSTfbB1DXvv\r\nH+yWRqyH6feIj1KK32yIv4R41Ex2gNNp6eAR890BuhFYZcuxuVFhmEu01GFPSH0rGYvZ2nd5V/Sx\r\nm+AoVNvYGr+Y8vb87uw="/>
+     <input type="hidden" id="appId" name="appId" value="0001"/>
+     <input type="hidden" id="transType" name="transType" value="01"/>
+  </form>
+  </div>
+      </body>
+</html>

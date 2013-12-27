@@ -1,0 +1,137 @@
+<div id="registView_other" data-role="page" data-dom-cache="true">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a id="registBack_OtherBtn" data-role="button" data-shadow="false"><span id="registBack_OtherValue">更多功能</span></a>
+		<h1>注册</h1>
+	</div>
+<div data-role="content" data-iscroll='{"vScroll":false,"useTransform":false}'>
+<fieldset class="hasLegend">
+			<legend>附加信息</legend>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>旅客类型</label> 
+				<select id="regist_userType" class="mobiscroll" name="旅客类型" data-role="none">
+					<option value="1">成人</option>
+					<option value="2">儿童</option>
+					<option value="3">学生</option>
+					<option value="4">残军</option>
+				<!--<select id="regist_userType" name="旅客类型" data-iconshadow="false" data-icon="none">
+						<option value="1">成人</option>
+						<option value="2">儿童</option>
+						<option value="3">学生</option>
+						<option value="4">残军</option>
+					-->
+				</select>
+			</div>
+			<div id="regist_schoolOptions" style="display:none;">
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校省份</label> 
+					<input id="regist_studentProvince" name="学校省份" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="regist_studentProvince_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学校名称</label>
+					<input id="regist_studentSchool" name="学校名称" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="regist_studentSchool_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain">
+					<label>院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;系</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_studentDepartment" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain">
+					<label>班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_studentClass" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_studentNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;制</label> 
+					<select id="regist_studentSystem" class="mobiscroll" name="学制" data-role="none">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+					<!--<select id="regist_studentSystem" name="学制" data-iconshadow="false" data-icon="none">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+						-->
+					</select>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>入学年份</label> 
+					<input name="入学年份" id="regist_studentEnterYear" class="i-txt right-arrow-input" />
+				</div>
+				<div data-role="fieldcontain">
+					<label>优惠卡号</label> 
+					<div class="ui-input-text pencil-input">
+					<input id="regist_preferenceCardNo" type="text"/>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>优惠区间</label> 
+					<input id="regist_preferenceFromStation"
+						type="text" class="right-arrow-input" readonly="readonly"/>
+					<input id="regist_preferenceFromStation_code" type="hidden"/>
+				</div>
+				<div data-role="fieldcontain" class="hasMust">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;至</label>
+					 <input id="regist_preferenceToStation" type="text" readonly="readonly" class="right-arrow-input"/>
+					<input id="regist_preferenceToStation_code" type="hidden"/>
+				</div>
+			</div>
+			<div data-role="fieldcontain" class="hasMust">
+				<label>验&nbsp;&nbsp;证&nbsp;&nbsp;码</label>
+				<div class="labelRightDiv verifyOut">
+					<input id="regist_passCode" type="tel" pattern="[0-9]*" maxlength="4"/> 
+					<img id="regist_passCodeImg" /> 
+					<a id="regist_refreshPassCode" href="#">看不清,换一张</a>
+				</div>
+			</div>
+		</fieldset>
+		
+		<div class="reg_b">
+			<span class="chk_outSpan">
+			<input id="agreeChkbox" type="checkbox" data-role="none" />
+			<span></span>
+			</span> 
+			<span>同意服务条款</span>
+			<a href="serviceMessage.html"><img
+				src="../images/button_right.png"></a>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal">
+			
+			<a id="regist_otherBackBtn" class="loginButton" data-role="button" data-prefetch> 上一步</a>
+			<a id="regist_otherNextBtn" class="loginButton" data-role="button" data-prefetch> 注册</a>
+		</div>
+	</div>
+
+	<div data-role="footer" class="footer_bar" data-position="fixed"
+		data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+			<ul>
+				<li><a id="bookTicketTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>车票预订</a></li>
+				<li><a id="queryOrderTab" data-icon="custom" data-iconpos="top" data-iconshadow="false" main>订单查询</a></li>
+				<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" main>我的12306</a></li>
+				<li><a id="moreOptionsTab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">更多功能</a></li>
+			</ul>
+		</div>
+	</div>
+</div>		

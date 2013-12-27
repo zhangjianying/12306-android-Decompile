@@ -1,0 +1,67 @@
+<div id="cancelOrderView" data-role="page">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false">
+    <h1>确认退票</h1>
+  </div>
+  
+  <div data-role="content" data-iscroll> 	
+	<div id="cancelOrderDetail">
+		<div class="normal-prompt">
+			<div id="cancelOrderDetailsPrompt" class="top-prompt"></div>
+		</div>
+		<div class="ui-grid-b detailsGrid">
+			<div id="cancelOrderFromStationDetail" class="ui-block-a">
+				<div id="cancelOrderFromStationName" class="stationName"></div>
+				<div id="cancelOrderTrainStartTime" class="trainStartTime"></div>
+			</div>
+			<div id="cancelOrderTrainMiscDetail" class="ui-block-b">
+				<div id="cancelOrderTrainCodeName" class="trainCodeName"></div>
+				<div id="cancelOrderTrainDetailArrow" class="trainDetailArrow" ></div>
+			</div>
+			<div id="cancelOrderToStationDetail" class="ui-block-c">
+				<div id="cancelOrderToStationName" class="stationName"></div>
+				<div id="cancelOrderTrainReachTime" class="trainReachTime"></div>
+			</div>
+		</div>
+		<div id="cancelOrderTicketDetailsGrid" class="orderDetailsGrid"></div>
+	</div>
+	
+    
+    <div class="content-space">
+	    <div style="font-size:9pt; margin-right:5px;text-align:right">应退票款：<span style="color:red;margin-right:5px"><span id="cancelOrderReturnPrice"></span>元</span>
+	   
+	    </div>
+	    <div style="font-size:9pt; margin-right:5px;text-align:right">
+	    <span style="margin-right:5px" id="cancelOrderCostRateId">当前退票费率：<span style="color:red" id="cancelOrderCostRate"></span><span style="color:red">%</span></span>
+	     <span >
+	      退票费：<span style="color:red;margin-right:5px;" id="cancelOrderCostPriceId"><span id="cancelOrderCostPrice"></span>元</span>
+	      </span>
+	    </div>
+    </div>
+    
+	<div class="div_bigBtn"><a id="cancelOrderConfirmBtn" data-role="button">确定退票</a></div>
+	<div class="div_bigBtn2"><a id="cancelOrderCancelBtn" data-role="button">取消退票</a></div>
+
+   <div class="tips2">
+    <h5><span>*</span>温馨提示：</h5>
+    <p id="cancelOrderConfirmOrderTips">
+    1.请确认身份信息和车票信息后，点击“确认退票”按钮，继续退票操作。<br>
+	2.退票费如下核收：票面乘车站开车时间前48小时以上的按票价5%计，24小时以上、不足48小时的按票价10%计，不足24小时的按票价20%计。<br>
+	3.应退票款按银行规定时限退还至购票时所使用的银行卡，请注意查收。<br>
+	4.如您需要退票费报销凭证，请凭购票所使用的乘车人有效身份证件原件和订单号码在办理退票之日起10日内到车站退票窗口索取。<br>
+	5.退票成功后，将向您注册时提供的邮箱和手机发送退票信息，请稍后查询。
+    </p>
+   </div>
+
+  </div>
+  
+  <div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+     <div data-role="navbar" class="f_nav">
+      <ul>
+        <li><a id="bookTicketTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false">车票预订</a></li>
+        <li><a id="queryOrderTab"  data-icon="custom"  class="ui-btn-active ui-state-persist" data-iconshadow="false" data-iconpos="top">订单查询</a></li>
+        <li><a id="my12306Tab"  data-icon="custom" data-iconshadow="false" data-iconpos="top">我的12306</a></li>
+        <li><a id="moreOptionsTab"  data-icon="custom" data-iconshadow="false" data-iconpos="top">更多功能</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

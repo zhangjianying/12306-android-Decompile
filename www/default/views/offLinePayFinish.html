@@ -1,0 +1,53 @@
+<div id="offLinePayFinishtView" data-role="page">
+	<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+	  <h1>预订完成</h1>
+	</div>
+
+	<div data-role="content" data-iscroll>
+		<div class="payfinish">
+			<div id="payFinish">
+				<h1>感谢您选择铁路出行！您的订单号是：</h1>
+				<div id="sequence_no" class="sequence_no"></div>
+				<div id="orderDetailsPrompt" class="ui-grid-b top-prompt normal-prompt">
+					<h6>预订信息</h6>
+				</div>
+				<ul id="trainDetailsGridAll" class="trainDetailsGridAll" data-role="listview" data-theme="c"></ul>
+				<div class="total" style="float: left">总张数：<span id="totalTicket"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车票状态：<span style="text-align: right; float: right;">待支付</span></div>
+				<div class="total" style="float: left">待支付金额：<span id="payfinishTotalPrice"></span></div>
+			</div>
+			<div id="cancelFinish" style="display:none;">
+				<br>
+				<h1>恭喜!您已退票成功 请您牢记业务号：</h1>
+				<div id="payOrderID" class="sequence_no"></div>
+				<div class="tips2">
+					<p>请您认真查阅铁路互联网售票相关规定，对于须换取纸质车票的，建议在开车前预留充分的时间办理换票手续。</p>
+				</div>
+				<br><br>
+			</div>
+			
+			<div class="twoBtnsHor">
+				<a id="queryOrder" href="queryOrder.html" data-role="button" data-prefetch>查询订单</a>
+			</div>
+			<h5 class="tipWarm"><span>*</span>温馨提示：</h5>
+		   <div id="customer_name"></div>
+			<p id="payFinishTips" style='text-indent:2em;margin-top:6px'>请于<span id="offLinePayFinishMessage"></span>前去车站或代售点取票，取票时支付票款。逾期不取系统将自动取消订单。</p>
+		</div>
+	</div>
+	
+	
+	<!-- 本页面去掉footer -->
+	<!-- 
+	<div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+		<div data-role="navbar" class="f_nav">
+		<ul>
+			<li><a id="bookTicketTab"  data-icon="custom" data-iconpos="top" class="ui-btn-active ui-state-persist" data-iconshadow="false">车票预订</a></li>
+			<li><a id="queryOrderTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false">订单查询</a></li>
+			<li><a id="my12306Tab"  data-icon="custom" data-iconpos="top" data-iconshadow="false">我的12306</a></li>
+			<li><a id="moreOptionsTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false">更多功能</a></li>
+		</ul>
+		</div>	
+	</div>
+	
+	 -->
+	
+</div>

@@ -1,0 +1,91 @@
+<div id="orderDetailsView" data-role="page" data-dom-cache="true">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false">
+    <h1>确认支付</h1>
+    <a href="#" id="pay_line" data-role="button" data-shadow="false" class="clock ui-btn-right"><span id="payTime"></span></a> 
+  </div>
+  
+  <div data-role="content" data-iscroll> 
+  <div id="orderDetailPre" style='display:none;'>
+		<div class="normal-prompt">
+			<div id="orderDetailsPromptPre" class="ui-block-a"></div>
+		</div>
+		<div class="ui-grid-b detailsGrid">
+			<div id="fromStationDetailPre" class="ui-block-a">
+				<div id="fromStationNamePre" class="stationName"></div>
+				<div id="trainStartTimePre" class="trainStartTime"></div>
+			</div>
+			<div id="trainMiscDetailPre" class="ui-block-b">
+				<div id="trainCodeNamePre" class="trainCodeName"></div>
+				<div id="trainDetailArrowPre" class="trainDetailArrow"></div>
+				<div id="trainDurationTimePre" class="trainDurationTime"></div>
+			</div>
+			<div id="toStationDetailPre" class="ui-block-c">
+				<div id="toStationNamePre" class="stationName"></div>
+				<div id="trainReachTimePre" class="trainReachTime"></div>
+			</div>
+		</div>
+		<div id="bookedTicketDetailsGridPre" class="orderDetailsGrid"></div>
+	</div>
+	
+	<div id="orderDetail">
+		<div class="normal-prompt">
+			<div id="orderDetailsPrompt" class="top-prompt"></div>
+		</div>
+		<div class="ui-grid-b detailsGrid">
+			<div id="fromStationDetail" class="ui-block-a">
+				<div id="fromStationName" class="stationName"></div>
+				<div id="trainStartTime" class="trainStartTime"></div>
+			</div>
+			<div id="trainMiscDetail" class="ui-block-b">
+				<div id="trainCodeName" class="trainCodeName"></div>
+				<div id="trainDetailArrow" class="trainDetailArrow" ></div>
+				<div id="trainDurationTime" class="trainDurationTime"></div>
+			</div>
+			<div id="toStationDetail" class="ui-block-c">
+				<div id="toStationName" class="stationName"></div>
+				<div id="trainReachTime" class="trainReachTime"></div>
+			</div>
+		</div>
+		<div id="bookedTicketDetailsGrid" class="orderDetailsGrid"></div>
+	</div>
+	
+    
+    <div class="content-space">
+	    <div id="ticketPriceInfo" class="ui-grid-b">
+	      <div class="ui-block-a" style="width: 25%;">欲购:<span id="orderTicketNumber"></span>张</div>
+	      <div class="ui-block-b">成功:<span id="orderSuccessTicktNumber"></span>张</div>
+	      <div class="ui-block-c" style="width: 40%;">总票价:<span style="color:red;"><span id="orderTotalPrice"></span>元</span></div>
+	    </div>
+	    <div id="orderDifPriceInfo" style="text-align: right; display:none;" >
+	    	<div>退回票款差价：<span style="color:red;" id="orderDifPrice">元</span></div>
+	    </div>
+	    <div id="orderRepayPriceInfo" style="text-align: right; display:none;" >
+	    	<div>收取新票票款：<span style="color:red;" id="newTicketPrice">元</span></div>
+	    	<div>退还原票票款：<span style="color:red;" id="oldTicketPrice">元</span></div>
+	    </div>
+    </div>
+    
+	<div class="div_bigBtn"><a id="confirmPaymentBtn" data-role="button">立即支付</a></div>
+	<div class="div_bigBtn"><a id="buyBackTicketBtn" data-role="button" style="display:none">购买返程</a></div>
+	<!--  div class="div_bigBtn"><a id="offLinePayConfirmTicket" data-role="button">手机预订</a></div-->
+	<div class="div_bigBtn"><a id="confirmChangeTicket" data-role="button" style="display:none">确认改签</a></div>
+	<div class="div_bigBtn2"><a id="cancelOrderBtn" data-role="button">取消订单</a></div>
+
+   <div class="tips2">
+    <h5><span>*</span>温馨提示：</h5>
+    <p id="confirmOrderTips">席位已成功锁定，请在45分钟内完成网上支付，否则系统将自动取消本次交易。</p>
+   </div>
+	
+  </div>
+  
+  <div data-role="footer" class="footer_bar" data-position="fixed" data-tap-toggle="false" data-id="navBar">
+     <div data-role="navbar" class="f_nav">
+      <ul>
+        <li><a id="bookTicketTab"  data-icon="custom" data-iconpos="top" data-iconshadow="false" class="ui-btn-active ui-state-persist">车票预订</a></li>
+        <li><a id="queryOrderTab"  data-icon="custom"  data-iconshadow="false" data-iconpos="top" main>订单查询</a></li>
+        <li><a id="my12306Tab"  data-icon="custom" data-iconshadow="false" data-iconpos="top" main>我的12306</a></li>
+        <li><a id="moreOptionsTab"  data-icon="custom" data-iconshadow="false" data-iconpos="top" main>更多功能</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
